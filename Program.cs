@@ -11,13 +11,22 @@ namespace LineProblem
     {
         static void Main(string[] args)
         {
-            Console.Write("Welcome to Line Comparison Computation");
+            Console.WriteLine("Welcome to Line Comparison Computation");
 
             Line l1 = new Line();
             l1.SetLine();
             
             //Use Case 1
-            Console.WriteLine("Length of Line 1 : "+ UseCase1.CalculateLength(l1));
+            Console.WriteLine("Length of Line : "+ UseCase1.CalculateLength(l1));
+
+            //Use Case 2
+            Line l2 = new Line();
+            Console.WriteLine("\nFor Line 2: ");
+            l2.SetLine();
+            if (UseCase2.CheckEquality(l1, l2))
+                Console.WriteLine("The lines are equal");
+            else
+                Console.WriteLine("The lines are unequal");
 
             //Temp Read line before exit
             Console.ReadLine();

@@ -13,7 +13,7 @@ namespace LineProblem
         public void  SetLine()
         {
             string []pt = new string[2];
-            Console.WriteLine("\nEnter x and y cordinates of the first point");
+            Console.WriteLine("Enter x and y cordinates of the first point");
             pt = Console.ReadLine().Split();
             x1 = float.Parse(pt[0]);
             y1 = float.Parse(pt[1]);
@@ -21,8 +21,9 @@ namespace LineProblem
 
             Console.WriteLine("Enter x and y cordinates of the second point");
             pt = Console.ReadLine().Split();
-            x1 = float.Parse(pt[0]);
-            y1 = float.Parse(pt[1]);
+            x2 = float.Parse(pt[0]);
+            y2 = float.Parse(pt[1]);
+
         }
     }
 }
