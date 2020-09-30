@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LineProblem.UseCases;
 
 namespace LineProblem
 {
@@ -24,6 +25,19 @@ namespace LineProblem
             x2 = float.Parse(pt[0]);
             y2 = float.Parse(pt[1]);
 
+        }
+
+        public override bool Equals(object obj)
+        {
+            return IsEqual(obj as Line);
+        }
+
+        public bool IsEqual(Line line)
+        {
+            if (UseCase1.CalculateLength(line) == UseCase1.CalculateLength(this))
+                return true;
+            else
+                return false;
         }
     }
 }

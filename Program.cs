@@ -33,6 +33,13 @@ namespace LineProblem
             Console.WriteLine();
             UseCase3.IdentifyGreater(l1, l2);
 
+            //Use Case 4
+            Console.WriteLine();
+            if (l1.Equals(l2))
+                Console.WriteLine("The lines are equal");
+            else
+                Console.WriteLine("The lines are unequal");
+
             //Temp Read line before exit
             Console.ReadLine();
         }
